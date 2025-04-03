@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoBomba.View.Alarma"
+             Title="">
+
+
+    <VerticalStackLayout Padding="29" Spacing="30">
+        <Label Text="Alarma"
+               FontSize="28"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"/>
+
+
+
+        <CollectionView ItemsSource="{Binding Alarma}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+
+                    <Frame Padding="20" Margin="9" CornerRadius="25" BackgroundColor="LightGray">
+                        <Grid ColumnDefinitions="*,*,*">
+                            <Label Text="{Binding Hora}"
+                                   FontSize="16"
+                                   FontAttributes="Bold"
+                                   Grid.Column="0"/>
+                            <Label Text="{Binding Dia}"
+                                   FontSize="16"
+                                   TextColor="Black"
+                                   Grid.Column="2"/>
+
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>

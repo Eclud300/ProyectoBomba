@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoBomba.View.Login"
+             NavigationPage.HasNavigationBar="False">
+
+    <Grid>
+        <!-- Imagen GIF como fondo -->
+        <Image Source="videoplayback.gif"
+               Aspect="AspectFill"
+               Opacity="1.9"
+               IsAnimationPlaying="True"/>
+
+        <!-- Contenido encima del GIF -->
+        <VerticalStackLayout Padding="20"
+                             HorizontalOptions="Center"
+                             VerticalOptions="CenterAndExpand">
+
+            <!-- Tarjeta con fondo degradado -->
+            <Frame CornerRadius="10"
+                   Padding="30"
+                   WidthRequest="350"
+                   Opacity="0.8">
+                <Frame.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#A2D9FF" Offset="0.0"/>
+                        <GradientStop Color="#2D9CDB" Offset="1.0"/>
+                    </LinearGradientBrush>
+                </Frame.Background>
+
+                <VerticalStackLayout Spacing="10">
+
+                    <Label Text="Correo"
+                           FontAttributes="Bold"
+                           FontSize="18"
+                           TextColor="Black"/>
+                    <Entry Placeholder="Ingresa tu correo"
+                            Text="{Binding Usuario, Mode=TwoWay}"
+                      FontSize="16"
+                       BackgroundColor="Transparent"
+                    TextColor="Black"
+                              PlaceholderColor="Black"/>
+
+                    <Label Text="Contraseña"
+                           FontAttributes="Bold"
+                           FontSize="18"
+                           TextColor="Black"/>
+                    <Entry Placeholder="Ingresa tu contraseña"
+       Text="{Binding Contrasena, Mode=TwoWay}"
+       FontSize="16"
+       IsPassword="True"
+       BackgroundColor="Transparent"
+       TextColor="Black"
+       PlaceholderColor="Black"/>
+
+                    <!-- Enlace de recuperar contraseña -->
+                    <Label Text="Recuperar contraseña"
+                           FontSize="14"
+                           TextColor="Blue"
+                           HorizontalOptions="End">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding RecuperarContrasenaCommand}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+
+                    <!-- Botón Iniciar Sesión -->
+                    <Button Text="Iniciar Sesión"
+                            CornerRadius="17"
+                            BackgroundColor="#00cdff"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            FontSize="17"
+                            Command="{Binding LoginCommand}"/>
+
+                    <!-- Línea de separación -->
+                    <BoxView HeightRequest="1"
+                             BackgroundColor="White"
+                             Opacity="0.5"/>
+
+                    <!-- Botón Crear Cuenta -->
+                    <Button Text="Crear cuenta"
+                            BackgroundColor="#00cdff"
+                            CornerRadius="17"
+                            TextColor="White"
+                            FontAttributes="Bold"
+                            FontSize="17"
+                            Command="{Binding CrearCuentaCommand}"/>
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>
