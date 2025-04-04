@@ -1,8 +1,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProyectoBomba.View.Historial"
-             xmlns:viewModel="clr-namespace:ProyectoBomba.ViewModel"
-                                                        >
+             xmlns:viewModel="clr-namespace:ProyectoBomba.ViewModel">
+
+
+
 
     <!-- Asignar el ViewModel -->
     <ContentPage.BindingContext>

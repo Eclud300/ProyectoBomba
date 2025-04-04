@@ -64,6 +64,8 @@ namespace ProyectoBomba.ViewModel
             }
         }
 
+
+
         private async Task VolverAlLogin()
         {
             await Application.Current.MainPage.Navigation.PopAsync();
