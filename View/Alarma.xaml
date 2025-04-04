@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProyectoBomba.View.Alarma"
-             Title="">
+                          Title="Alarma"
+             BackgroundColor="#97d6ea">
 
 
     <VerticalStackLayout Padding="29" Spacing="30">
@@ -17,7 +18,7 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
 
-                    <Frame Padding="20" Margin="9" CornerRadius="25" BackgroundColor="LightGray">
+                    <Frame Padding="10" Margin="0,0,0,10" CornerRadius="15" BackgroundColor="#d5eff7">
                         <Grid ColumnDefinitions="*,*,*">
                             <Label Text="{Binding Hora}"
                                    FontSize="16"
@@ -33,5 +34,15 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
+
+
+        <!-- Botón para agregar una alarma -->
+        <ImageButton Source="icono_agregar.png"
+                     Margin="0,100,0,0"
+                     HeightRequest="50"
+                     WidthRequest="50"
+                     BackgroundColor="Transparent"
+                     HorizontalOptions="Center"
+                     Command="{Binding AgregarAlarmaCommand}"/>
     </VerticalStackLayout>
 </ContentPage>

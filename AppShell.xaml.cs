@@ -13,6 +13,7 @@ namespace ProyectoBomba
             Routing.RegisterRoute(nameof(CrearCuenta), typeof(CrearCuenta));
             Routing.RegisterRoute(nameof(Inicio), typeof(Inicio));
             Routing.RegisterRoute(nameof(Historial), typeof(Historial));
+            Routing.RegisterRoute(nameof(Agregar_Alarma), typeof(Agregar_Alarma));
         }
 
         private async void OnCerrarSesion(object sender, EventArgs e)

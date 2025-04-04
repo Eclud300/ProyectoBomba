@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoBomba.View.Agregar_Alarma"
+             Title="Agregar_Alarma"
+             BackgroundColor="#97d6ea">
+
+    
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <!-- Botón de menú -->
+            <ImageButton Source="menu_icon.png" 
+                     HorizontalOptions="Start"
+                     VerticalOptions="Start"
+                     Grid.Row="0"/>
+
+            <!-- Contenido principal -->
+            <StackLayout Grid.Row="1" HorizontalOptions="Center">
+                <Label Text="00 : 00" FontSize="65" Margin="65,0,0,30" TextColor="Black"/>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label Text="a.m." FontSize="45" TextColor="Black" Margin="10,0,60,70"/>
+                    <Label Text="p.m." FontSize="45" TextColor="Black"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20">
+                    <Label Text="Do." TextColor="Black" FontSize="20"/>
+                    <Label Text="Lu." TextColor="Black" FontSize="20"/>
+                    <Label Text="Ma." TextColor="Black" FontSize="20"/>
+                    <Label Text="Mi." TextColor="Black" FontSize="20"/>
+                    <Label Text="Ju." TextColor="Black" FontSize="20"/>
+                    <Label Text="Vi." TextColor="Black" FontSize="20"/>
+                    <Label Text="Sa." TextColor="Black" FontSize="20"/>
+                </StackLayout>
+
+                <Label Text="Temporizador" FontSize="28" TextColor="Black" Margin="78,70,0,0"/>
+                <Label Text="00 : 00" FontSize="30" TextColor="Black" Margin="115,25,0,30"/>
+            </StackLayout>
+
+            <!-- Botones -->
+            <StackLayout Grid.Row="2" Orientation="Horizontal" HorizontalOptions="Center" Spacing="70">
+                <Button Text="Cancelar" 
+                        FontSize="23" 
+                        BackgroundColor="Transparent" 
+                        BorderColor="Black" 
+                        TextColor="Black" 
+                        Command="{Binding RegresarCommand}"/>
+
+                <Button Text="Guardar" 
+                        FontSize="23" 
+                        BackgroundColor="Transparent" 
+                        BorderColor="Black" 
+                        TextColor="Black"/>
+            </StackLayout>
+
+        </Grid>
+    </ContentPage.Content>
+
+</ContentPage>

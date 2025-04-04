@@ -5,7 +5,6 @@
                    NavigationPage.HasNavigationBar="False"                        >
 
     <ContentPage.Content>
-        <!-- Usamos un Grid para estructurar el diseño -->
         <Grid Padding="00">
             <!-- Imagen GIF como fondo -->
             <Image Source="videoplayback.gif"
@@ -15,7 +14,7 @@
                    Grid.Row="7"
                    Grid.Column="0"/>
 
-            <!-- Botón Volver al Login (parte superior izquierda) -->
+            <!-- Botón Volver al Login -->
             <Button Text="Atras"
                     BackgroundColor="Transparent"
                     TextColor="White"
@@ -27,7 +26,6 @@
                     Grid.Row="1"
                     Grid.Column="0" />
 
-            <!-- Contenido principal dentro de un Frame, con fondo semi-transparente -->
             <Frame BackgroundColor="White"
                    CornerRadius="20"
                    Padding="20"
@@ -44,8 +42,6 @@
                         <GradientStop Color="#2D9CDB" Offset="1.0"/>
                     </LinearGradientBrush>
                 </Frame.Background>
-
-
 
                 <VerticalStackLayout Spacing="10">
                     <!-- Campo Nombre de Usuario -->
