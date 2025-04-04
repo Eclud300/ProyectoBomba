@@ -5,6 +5,8 @@ using ProyectoBomba.View;
 
 namespace ProyectoBomba.ViewModel
 {
+
+    // Intentan conectar la api a la aplicacion web
     public class CrearCuentaViewModel
     {
         public string Usuario { get; set; }
