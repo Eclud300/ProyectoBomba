@@ -16,7 +16,7 @@ namespace ProyectoBomba.Servicios
         public UsuarioServicio()
         {
             _httpClient = new HttpClient();
-            _httpClient.BaseAddress = new Uri("https://localhost:7213/api/Usuario"); // Cambia esto a la URL de tu API
+            _httpClient.BaseAddress = new Uri("https://7b4763sm-5098.usw3.devtunnels.ms/api/Usuario"); // Cambia esto a la URL de tu API
         }
 
      
