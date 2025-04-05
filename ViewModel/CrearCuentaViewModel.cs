@@ -11,7 +11,7 @@ namespace ProyectoBomba.ViewModel
     public class CrearCuentaViewModel
     {
         private readonly HttpClient _httpClient;
-        private const string ApiUrl = "https://7b4763sm-5098.usw3.devtunnels.ms/api/Usuario"; // Reemplaza con tu URL
+        private const string ApiUrl = "https://7b4763sm-5098.usw3.devtunnels.ms/api/Usuario"; // Reemplaza con tu URL //
 
         public string Usuario { get; set; }
         public string Correo { get; set; }
