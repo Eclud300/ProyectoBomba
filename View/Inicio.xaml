@@ -4,7 +4,6 @@
              x:Class="ProyectoBomba.View.Inicio"
              Title="Inicio">
 
-    <!-- Fondo de la página con gradiente -->
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
             <GradientStop Color="#A2D9FF" Offset="0.0"/>
@@ -14,7 +13,6 @@
 
     <ContentPage.Content>
         <VerticalStackLayout Padding="20">
-            <!-- Título de la página -->
             <Label Text="Inicio"
                    FontSize="30"
                    Margin="0,15,0,0"
@@ -35,12 +33,11 @@
                        Margin="30,0,0,0" />
             </FlexLayout>
 
-            <!-- Switch y tiempo -->
             <HorizontalStackLayout>
-                <Switch IsToggled="True" 
-                        Margin="65,40,0,0"
-                        ScaleX="2.0" 
-                        ScaleY="2.0" />
+                <Switch Margin="65,40,0,0"
+                        ScaleX="2.0"
+                        ScaleY="2.0"
+                        Toggled="Switch_Toggled"/>
                 <Label Text="00:30"
                        TextColor="Black"
                        FontAttributes="Bold"
@@ -48,25 +45,13 @@
                        Margin="132,40,0,0" />
             </HorizontalStackLayout>
 
-            <!-- Aquí puedes agregar más contenido si lo necesitas -->
-            <FlexLayout Margin="23,130,0,0">
-                <!-- Otro contenido si es necesario -->
-            </FlexLayout>
-
-            <!-- Área para la imagen de la gráfica de pastel -->
             <VerticalStackLayout HorizontalOptions="Center">
                 <Image Source="tinaco1.png"
                        WidthRequest="300"
                        HeightRequest="300"
                        Aspect="AspectFit"
-                       Margin="0,40,0,0"
-                       
-                                    >
-                    
-                </Image>
-               
+                       Margin="0,40,0,0"/>
             </VerticalStackLayout>
         </VerticalStackLayout>
     </ContentPage.Content>
-
 </ContentPage>
