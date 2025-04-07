@@ -5,18 +5,14 @@
              NavigationPage.HasNavigationBar="False">
 
     <Grid>
-        <!-- Imagen GIF como fondo -->
         <Image Source="videoplayback.gif"
                Aspect="AspectFill"
                Opacity="1.9"
-               IsAnimationPlaying="True"/>
+               IsAnimationPlaying="True" />
 
-        <!-- Contenido encima del GIF -->
         <VerticalStackLayout Padding="20"
                              HorizontalOptions="Center"
                              VerticalOptions="CenterAndExpand">
-
-            <!-- Tarjeta con fondo degradado -->
             <Frame CornerRadius="10"
                    Padding="30"
                    WidthRequest="350"
@@ -35,25 +31,24 @@
                            FontSize="18"
                            TextColor="Black"/>
                     <Entry Placeholder="Ingresa tu correo"
-                            Text="{Binding Usuario, Mode=TwoWay}"
-                      FontSize="16"
-                       BackgroundColor="Transparent"
-                    TextColor="Black"
-                              PlaceholderColor="Black"/>
+                           Text="{Binding Usuario, Mode=TwoWay}"
+                           FontSize="16"
+                           BackgroundColor="Transparent"
+                           TextColor="Black"
+                           PlaceholderColor="Black"/>
 
                     <Label Text="Contraseña"
                            FontAttributes="Bold"
                            FontSize="18"
                            TextColor="Black"/>
                     <Entry Placeholder="Ingresa tu contraseña"
-       Text="{Binding Contrasena, Mode=TwoWay}"
-       FontSize="16"
-       IsPassword="True"
-       BackgroundColor="Transparent"
-       TextColor="Black"
-       PlaceholderColor="Black"/>
+                           Text="{Binding Contrasena, Mode=TwoWay}"
+                           FontSize="16"
+                           IsPassword="True"
+                           BackgroundColor="Transparent"
+                           TextColor="Black"
+                           PlaceholderColor="Black"/>
 
-                    <!-- Enlace de recuperar contraseña -->
                     <Label Text="Recuperar contraseña"
                            FontSize="14"
                            TextColor="Blue"
@@ -63,7 +58,6 @@
                         </Label.GestureRecognizers>
                     </Label>
 
-                    <!-- Botón Iniciar Sesión -->
                     <Button Text="Iniciar Sesión"
                             CornerRadius="17"
                             BackgroundColor="#00cdff"
@@ -72,12 +66,10 @@
                             FontSize="17"
                             Command="{Binding LoginCommand}"/>
 
-                    <!-- Línea de separación -->
                     <BoxView HeightRequest="1"
                              BackgroundColor="White"
                              Opacity="0.5"/>
 
-                    <!-- Botón Crear Cuenta -->
                     <Button Text="Crear cuenta"
                             BackgroundColor="#00cdff"
                             CornerRadius="17"
