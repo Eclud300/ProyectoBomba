@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoBomba.View.CrearCuenta"
+                   NavigationPage.HasNavigationBar="False"                        >
+
+    <ContentPage.Content>
+        <Grid Padding="00">
+            <!-- Imagen GIF como fondo -->
+            <Image Source="videoplayback.gif"
+                   Aspect="AspectFill"
+                   Opacity="0.9"
+                   IsAnimationPlaying="True"
+                   Grid.Row="7"
+                   Grid.Column="0"/>
+
+            <!-- Botón Volver al Login -->
+            <Button Text="Atras"
+                    BackgroundColor="Transparent"
+                    TextColor="White"
+                    FontSize="38"
+                    Command="{Binding VolverAlLoginCommand}"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    Padding="10"
+                    Grid.Row="1"
+                    Grid.Column="0" />
+
+            <Frame BackgroundColor="White"
+                   CornerRadius="20"
+                   Padding="20"
+                   WidthRequest="300"
+                   Opacity="0.9"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   Grid.Row="1"
+                   Grid.Column="0">
+
+                <Frame.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#A2D9FF" Offset="0.0"/>
+                        <GradientStop Color="#2D9CDB" Offset="1.0"/>
+                    </LinearGradientBrush>
+                </Frame.Background>
+
+                <VerticalStackLayout Spacing="10">
+                    <!-- Campo Nombre de Usuario -->
+                    <Label Text="Nombre de Usuario"
+                           FontAttributes="Bold"
+                           FontSize="18"
+                           TextColor="Black"/>
+                    <Entry Placeholder="Ingresa tu nombre de usuario"
+                           Text="{Binding Usuario, Mode=TwoWay}"
+                           PlaceholderColor="Black"
+                           FontSize="16"
+                           BackgroundColor="Transparent"
+                           TextColor="Black"/>
+
+                    <!-- Campo Correo -->
+                    <Label Text="Correo"
+                           FontAttributes="Bold"
+                           FontSize="18"
+                           TextColor="Black"/>
+                    <Entry Placeholder="Ingresa tu correo"
+                           Text="{Binding Correo, Mode=TwoWay}"
+                           PlaceholderColor="Black"
+                           FontSize="16"
+                           BackgroundColor="Transparent"
+                           TextColor="Black"/>
+
+                    <!-- Campo Contraseña -->
+                    <Label Text="Contraseña"
+                           FontAttributes="Bold"
+                           FontSize="18"
+                           TextColor="Black"/>
+                    <Entry Placeholder="Ingresa tu contraseña"
+                           Text="{Binding Contraseña, Mode=TwoWay}"
+                           FontSize="16"
+                           IsPassword="True"
+                           BackgroundColor="Transparent"
+                           PlaceholderColor="Black"
+                           TextColor="Black"/>
+
+                    <!-- Botón Crear Cuenta -->
+                    <Button Text="Crear cuenta"
+                            BackgroundColor="#00cdff"
+                            TextColor="White"
+                            FontSize="16"
+                            Command="{Binding CrearCuentaCommand}"/>
+                </VerticalStackLayout>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

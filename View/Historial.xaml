@@ -1,0 +1,95 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoBomba.View.Historial"
+             xmlns:viewModel="clr-namespace:ProyectoBomba.ViewModel">
+
+
+
+
+    <!-- Asignar el ViewModel -->
+    <ContentPage.BindingContext>
+        <viewModel:HistorialViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <!-- Usamos un Grid para contener el fondo degradado -->
+        <Grid>
+            <!-- Fondo degradado -->
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#A2D9FF" Offset="0.0"/>
+                    <GradientStop Color="#2D9CDB" Offset="1.0"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <!-- Contenido de la página -->
+            <VerticalStackLayout BackgroundColor="White">
+                <!-- Título -->
+                <Label Text="Historial"
+                       FontSize="30"
+                       Margin="0,15,0,30"
+                       FontAttributes="Bold"
+                       TextColor="Black"
+                       HorizontalTextAlignment="Center"/>
+
+                <!-- Tabla de Historial -->
+                <ListView ItemsSource="{Binding HistorialData}"
+                          Margin="20,0,20,20"
+                          VerticalOptions="FillAndExpand"
+                          RowHeight="80"  
+                          HeightRequest="470"
+                          SeparatorVisibility="Default">
+
+                    <ListView.Header>
+                        <Grid Padding="10,5" ColumnSpacing="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Día" 
+                                   FontAttributes="Bold" 
+                                   Grid.Column="0"
+                                   HorizontalTextAlignment="Center"/>
+                            <Label Text="Litros" 
+                                   FontAttributes="Bold" 
+                                   Grid.Column="1"
+                                   HorizontalTextAlignment="Center"/>
+                            <Label Text="Tiempo" 
+                                   FontAttributes="Bold" 
+                                   Grid.Column="2"
+                                   HorizontalTextAlignment="Center"/>
+                        </Grid>
+                    </ListView.Header>
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Padding="10,15">
+                                    <!-- Agregar más padding para alargar filas -->
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding Dia}" 
+                                           Grid.Column="0" 
+                                           HorizontalTextAlignment="Center"
+                                           VerticalTextAlignment="Center"/>
+                                    <Label Text="{Binding Litros}" 
+                                           Grid.Column="1" 
+                                           HorizontalTextAlignment="Center"
+                                           VerticalTextAlignment="Center"/>
+                                    <Label Text="{Binding Tiempo}" 
+                                           Grid.Column="2" 
+                                           HorizontalTextAlignment="Center"
+                                           VerticalTextAlignment="Center"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </VerticalStackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

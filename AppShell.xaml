@@ -1,0 +1,56 @@
+<Shell
+    x:Class="ProyectoBomba.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ProyectoBomba.View"
+    FlyoutBehavior="Flyout"
+    Title="ProyectoBomba"
+    FlyoutBackgroundColor="#cdeef7"
+    FlyoutWidth="230"
+    Shell.BackgroundColor="#97d6ea">
+
+    <!-- Encabezado del menú lateral -->
+
+
+    <Shell.FlyoutHeader>
+        <StackLayout BackgroundColor="#DEF7FE"
+                     Padding="35"
+                     Spacing="15"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center">
+            <Image Source="a.png" HeightRequest="60" WidthRequest="60" HorizontalOptions="Center">
+                <Image.Clip>
+                    <EllipseGeometry Center="30,30" RadiusX="30" RadiusY="30" />
+                </Image.Clip>
+            </Image>
+            <Label Text="hasbulla Magomedovich"
+                   FontSize="14"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="Black"/>
+            <Label Text="Magomedovich@company.com"
+                   FontSize="11"
+                   HorizontalOptions="Center"
+                   TextColor="Gray"/>
+        </StackLayout>
+    </Shell.FlyoutHeader>
+
+    <!-- Menú lateral con las páginas principales -->
+    <FlyoutItem Title="Inicio" Route="Inicio" FlyoutIcon="inicio.png">
+        <ShellContent ContentTemplate="{DataTemplate local:Inicio}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Historial" Route="Historial" FlyoutIcon="historial.png">
+        <ShellContent ContentTemplate="{DataTemplate local:Historial}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Alarma" Route="Alarma" FlyoutIcon="alarma.png">
+        <ShellContent ContentTemplate="{DataTemplate local:Alarma}" />
+    </FlyoutItem>
+    
+    
+    <!-- Botón para cerrar sesión -->
+    <MenuItem Text="Cerrar Sesión"
+              Clicked="OnCerrarSesion"
+              IconImageSource="logout.png"/>
+</Shell>
